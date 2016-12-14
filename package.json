@@ -1,0 +1,14 @@
+{
+  "name": "cordova-echo-example-plugin",
+  "version": "0.0.1",
+  "description": "",
+  "cordova": {
+    "id": "com.jonworek.cordova-echo",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "Jon Worek",
+  "license": "ISC"
+}

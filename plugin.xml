@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.jonworek.cordova-echo" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordova-echo-example-plugin</name>
+    <js-module name="cordova-echo-example-plugin" src="www/cordova-echo-example-plugin.js">
+        <clobbers target="cordova.plugins.cordova-echo-example-plugin" />
+    </js-module>
+</plugin>
