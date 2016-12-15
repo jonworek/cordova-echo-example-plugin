@@ -1,7 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="com.jonworek.cordova-echo" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>cordova-echo-example-plugin</name>
-    <js-module name="cordova-echo-example-plugin" src="www/cordova-echo-example-plugin.js">
-        <clobbers target="cordova.plugins.cordova-echo-example-plugin" />
-    </js-module>
+<plugin id="cordova-echo-example-plugin" version="0.0.1"
+xmlns="http://apache.org/cordova/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android">
+  <name>cordova-echo-example-plugin</name>
+  <js-module name="cordova-echo-example-plugin" src="www/echo.js">
+    <clobbers target="cordova.plugins.cordova-echo-example-plugin" />
+  </js-module>
+  <platform name="android">
+    <config-file parent="/*" target="res/xml/config.xml">
+      <feature name="Echo">
+        <param name="android-package" value="com.jonworek.echo" />
+      </feature>
+    </config-file>
+    <config-file parent="/*" target="AndroidManifest.xml" />
+    <source-file src="src/android/Echo.java"
+    target-dir="src/com/jonworek/echo" />
+  </platform>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="Echo">
+        <param name="ios-package"
+        value="Echo" />
+      </feature>
+    </config-file>
+    <source-file src="src/ios/Echo.m" />
+  </platform>
 </plugin>
